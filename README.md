@@ -334,7 +334,7 @@ All technical implementations for this interface are included here.
 
 Unlike just transferring assets, interacting with MultiChainChat and Circle Relayer smart contracts required some additional considerations when using Embedded Wallets. We will explain the most important functions used to make this possible, however all the code will be available at the end of this section.
 
-- Send Message Cross-chain with Programmable Wallets: This type of transaction can be done in just one transaction. It is executed using circle's Javascript SDK.
+- Send Message Cross-chain with Embedded Wallets: This type of transaction can be done in just one transaction. It is executed using circle's Javascript SDK.
 
         const data = chatInterface.encodeFunctionData("addMessage", [
             to,
@@ -356,7 +356,7 @@ Unlike just transferring assets, interacting with MultiChainChat and Circle Rela
             params: [transaction],
         });
 
-- Send CCTP transfer: In addition to the cross-chain message that is sent in the chat, making a transfer from the Circle Relayer involves 2 steps, which is to approve the amount to be transferred from the Developer Programmable Wallet and then execute the transaction to make the transfer with the relayer.
+- Send CCTP transfer: In addition to the cross-chain message that is sent in the chat, making a transfer from the Circle Relayer involves 2 steps, which is to approve the amount to be transferred from the Embedded Wallets and then execute the transaction to make the transfer with the relayer.
 
         const gas_limit = 700_000;
         const quote = await chat.quoteCrossChainCost(
