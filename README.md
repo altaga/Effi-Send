@@ -336,55 +336,55 @@ Unlike just transferring assets, interacting with MultiChainChat and Circle Rela
 
 - Send Message Cross-chain with Programmable Wallets: This type of transaction can be done in just one transaction. It is executed using circle's Javascript SDK.
 
-        const data = chatInterface.encodeFunctionData("addMessage", [
-            to,
-            ethers.utils.parseUnits(
-                this.state.amount === "" ? "0" : this.state.amount,
-                6
-            ),
-            messFrom,
-            messTo,
-            iv,
-        ]);
-        const transaction = {
-            from: this.context.value.address,
-            to: this.state.tokenSelected.address,
-            data,
-        };
-        let result = await provider.request({
-            method: "eth_sendTransaction",
-            params: [transaction],
-        });
+    const data = chatInterface.encodeFunctionData("addMessage", [
+        to,
+        ethers.utils.parseUnits(
+            this.state.amount === "" ? "0" : this.state.amount,
+            6
+        ),
+        messFrom,
+        messTo,
+        iv,
+    ]);
+    const transaction = {
+        from: this.context.value.address,
+        to: this.state.tokenSelected.address,
+        data,
+    };
+    let result = await provider.request({
+        method: "eth_sendTransaction",
+        params: [transaction],
+    });
 
 - Send CCTP transfer: In addition to the cross-chain message that is sent in the chat, making a transfer from the Circle Relayer involves 2 steps, which is to approve the amount to be transferred from the Developer Programmable Wallet and then execute the transaction to make the transfer with the relayer.
 
-        const gas_limit = 700_000;
-        const quote = await chat.quoteCrossChainCost(
-            this.context.value.toChain,
-            gas_limit
-        );
-        const data = chatInterface.encodeFunctionData("sendMessage", [
-            this.context.value.toChain,
-            chains[index2].crossChainChat,
-            gas_limit,
-            to,
-            messFrom,
-            messTo,
-            iv,
-            ethers.utils.parseUnits(
-                this.state.amount === "" ? "0" : this.state.amount,
-                6
-            ),
-        ]);
-        const transaction = {
-            from: this.context.value.address,
-            to: this.state.tokenSelected.address,
-            data,
-        };
-        let result = await provider.request({
-            method: "eth_sendTransaction",
-            params: [transaction],
-        });
+    const gas_limit = 700_000;
+    const quote = await chat.quoteCrossChainCost(
+        this.context.value.toChain,
+        gas_limit
+    );
+    const data = chatInterface.encodeFunctionData("sendMessage", [
+        this.context.value.toChain,
+        chains[index2].crossChainChat,
+        gas_limit,
+        to,
+        messFrom,
+        messTo,
+        iv,
+        ethers.utils.parseUnits(
+            this.state.amount === "" ? "0" : this.state.amount,
+            6
+        ),
+    ]);
+    const transaction = {
+        from: this.context.value.address,
+        to: this.state.tokenSelected.address,
+        data,
+    };
+    let result = await provider.request({
+        method: "eth_sendTransaction",
+        params: [transaction],
+    });
 
 All technical implementations for this interface are included here.
 
