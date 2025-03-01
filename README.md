@@ -26,7 +26,7 @@ VIDEODEMO: [VIDEO](https://youtu.be/1EnpKgoqQOk)
 
 - [Bridge API](https://docs.privy.io/guide/react/recipes/misc/card-based-funding#_1-enable-debit-card-funding-in-the-dashboard): To top-up the wallet we use Privy's On-Ramp, which allows adding crypto through multiple methods: card payment, receipt from an exchange or direct deposit from another wallet.
 
-- Batch Balances: Get the balance of multiple tokens at the same time on each network.
+- Batch Balances: Get the balance of multiple tokens at the same time on each network. To improve UX/UI.
 
 ## Chat Services:
 
