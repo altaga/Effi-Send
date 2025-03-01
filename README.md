@@ -1,6 +1,6 @@
 # EffiSend
  
-EffiSend: Slogan
+Effisend is a decentralized, Venmo-like mobile DApp that through Privy and Stablecoins deliver secure, private onchain transactions, bringing accessible financial access in Latin America.
 
 <img src="./Images/featuredWH.png">
 
