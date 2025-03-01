@@ -10,7 +10,7 @@ WALLET CODE: [CODE](./ExpoApp/)
 
 PLAYSTORE LINK: [LINK](https://play.google.com/store/apps/details?id=com.altaga.effisend.privy)
 
-VIDEODEMO: [VIDEO](PENDING...)
+VIDEODEMO: [VIDEO](https://youtu.be/1EnpKgoqQOk)
 
 # System Diagram:
 
