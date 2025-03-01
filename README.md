@@ -18,13 +18,13 @@ VIDEODEMO: [VIDEO](PENDING...)
 
 ## Wallet Services:
 
-- [Expo SDK](https://docs.privy.io/guide/expo/): Para el desarrollo de la aplicacion nativa utilizamos el Expo SDK proporcionado por Privy. Gracias a nuestra experiencia previa en el desarrollo de aplicaciones nativas para Android mediante React Native, pudimos crear el prototipo de manera más ágil. 
+- [Expo SDK](https://docs.privy.io/guide/expo/): For the development of the native application we used the Expo SDK provided by Privy. Thanks to our previous experience in developing native applications for Android using React Native, we were able to create the prototype in a more agile way.
 
-- [Authentication](https://docs.privy.io/guide/authentication): A través del SDK de Privy, es posible realizar el onboarding de los usuarios en pocos clics y utilizando solo su correo electrónico. Además, esta funcionalidad permite recuperar el acceso a los assets y mensajes que esta contiene en caso de que el dispositivo se pierda o sufra daños.
+- [Authentication](https://docs.privy.io/guide/authentication): Through the Privy SDK, it is possible to onboard users in a few clicks and using only their email. In addition, this functionality allows you to recover access to the assets and messages it contains in case the device is lost or damaged.
 
-- [Embedded wallets](https://docs.privy.io/guide/embedded-wallets): El SDK de Privy nos facilitó enormemente la creación de una wallet de forma rápida, eliminando la necesidad de configurar la encriptación, salvado de private key y la firma de transacciones. 
+- [Embedded wallets](https://docs.privy.io/guide/embedded-wallets): The Privy SDK made it extremely easy for us to quickly create a wallet, eliminating the need to configure encryption, private key saving, and transaction signing.
 
-- [Bridge API](https://docs.privy.io/guide/react/recipes/misc/card-based-funding#_1-enable-debit-card-funding-in-the-dashboard): Para realizar el Top-up a la wallet utilizamos el On-Ramp de Privy, que permite agregar crypto a través de múltiples métodos: pago con tarjeta, recepción desde un exchange o depósito directo desde otra wallet.
+- [Bridge API](https://docs.privy.io/guide/react/recipes/misc/card-based-funding#_1-enable-debit-card-funding-in-the-dashboard): To top-up the wallet we use Privy's On-Ramp, which allows adding crypto through multiple methods: card payment, receipt from an exchange or direct deposit from another wallet.
 
 - Batch Balances: In this case, the application is used to manage information on various contracts of our creation, in order to better organize the contracts we have in each network.
 
@@ -32,9 +32,9 @@ VIDEODEMO: [VIDEO](PENDING...)
 
 <img src="./Images/chat.drawio.png">
 
-- [Request](https://docs.privy.io/guide/expo/embedded/requests): Mediante este metodo mandamos transacciones directamente desde el SDK de Privy hacia cualquiera de las blockchains compatibles con el sistema.
+- [Request](https://docs.privy.io/guide/expo/embedded/requests): Through this method we send transactions directly from the Privy SDK to any of the blockchains compatible with the system.
 
-- CCTP: We use the CCTP service that Wormhole already has integrated as a Circle Relayer. This allows us to easily perform Cross Chain Transfers of USDC.
+- CCTP: We use the CCTP service that Wormhole has already integrated as a Circle Relayer. This allows us to easily perform Cross Chain Transfers of USDC.
 
 - Standard Relayer: We use this relayer in our chat contract to be able to communicate messages between chains.
 
@@ -52,7 +52,7 @@ Like any wallet on the market, we first had to cover its basic functions. In thi
 
 ### Expo SDK:
 
-Parte escencial de proyecto era realizar una wallet nativa para mobiles, asi que utilizamos Expo y Privy SDK para proveer a nuestra app un desarollo rapido y a su vez la conectividad a todos los servicios de Privy.
+An essential part of the project was to create a native wallet for mobile devices, so we used Expo and Privy SDK to provide our app with fast development and connectivity to all Privy services.
 
     <PrivyProvider
         supportedChains={[
@@ -85,7 +85,7 @@ All technical implementations for main wallet are included here.
 
 ### Authentication:
 
-Como parte de nuestra estrategia de adopcion es proporcionar la forma mas sencilla y agil de que cualquier usuario que use su celular pueda crear y mantener una cuenta crypto con el menor esfuerzo posible, asi que realizamos mediante Privy un flujo de registro a nuestra app, donde el usuario solo tiene que ingresar un correo electornico, confirmar un codigo y ya tendra acceso completo a nuestra aplicacion.
+As part of our adoption strategy, we want to provide the easiest and fastest way for any user using their cell phone to create and maintain a crypto account with the least amount of effort possible. So, through Privy, we created a registration flow to our app, where the user only has to enter an email address, confirm a code, and they will have full access to our application.
 
 <img src="./Images/setup1.png" width="32%"> <img src="./Images/setup2.png" width="32%"> <img src="./Images/setup3.png" width="32%">
 
@@ -138,11 +138,11 @@ All technical implementations for transactions are included here.
 
 ### Bridge API: 
 
-Para los usuarios nuevos en crypto siempre es un problema acceder al mismo debido a la falta de conocimiento en como acceder a crypto assets. Sin embargo este problema lo resolvemos mediante Privy SDK, ya que nos permite realizar de forma sencilla el On-Ramp de los usuarios incluso con tarjeta de debido.
+For new users in crypto, it is always a problem to access it due to the lack of knowledge on how to access crypto assets. However, we solve this problem through Privy SDK, since it allows us to easily perform On-Ramp of users even with a debit card.
 
 <img src="./Images/onramp.png">
 
-En el caso de nuestra app para acceder a este menu solo debemos presionar el boton de request.
+In the case of our app, to access this menu we only have to press the request button.
 
 <img src="./Images/main3.png" width="32%"> <img src="./Images/onramp1.png" width="32%"> <img src="./Images/onramp2.png" width="32%">
 
@@ -402,4 +402,4 @@ Although this process may seem somewhat complicated, for the user it is as simpl
 2. https://www.triple-a.io/cryptocurrency-ownership-data
 3. https://medium.com/@androidcrypto/talk-to-your-credit-card-android-nfc-java-d782ff19fc4a
 4. https://stripe.com/en-mx/resources/more/text-to-pay-101-what-it-is-how-it-works-and-how-to-implement-it
-
+5. https://docs.privy.io/
